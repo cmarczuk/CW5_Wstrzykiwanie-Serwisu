@@ -1,0 +1,29 @@
+﻿@page
+@model CW5_Wstrzykiwanie_Serwisu.Pages.Pobrane_z_bazy_danychModel
+@{
+}
+
+<div class="display-4 text-center"><h1>Pobrane z bazy danych</h1></div>
+<div class="col-12">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Tytuł</th>
+                <th>Wykonawca</th>
+                <th>Opis</th>
+                <th>Zdjęcie</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Products)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Maker)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td><img src="@Html.DisplayFor(modelItem => item.Image)" width="300px" height="300px" /></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
