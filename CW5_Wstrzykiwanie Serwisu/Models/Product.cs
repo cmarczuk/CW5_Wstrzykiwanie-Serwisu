@@ -15,11 +15,11 @@ namespace CW5_Wstrzykiwanie_Serwisu.Models
         [JsonIgnore]
         public int Id { get; set; }
 
-        [Column(TypeName = "varchar(255)"), MaxLength(255)]
+        [Column(TypeName = "varchar(64)"), MaxLength(64)]
         [JsonPropertyName("id")]
         public string Id_json { get; set; }
 
-        [Column(TypeName = "varchar(255)"), MaxLength(255)]
+        [Column(TypeName = "varchar(128)"), MaxLength(128)]
         [JsonPropertyName("maker")]
         public string Maker { get; set; }
 
